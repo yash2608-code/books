@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdf-Drive</title>
+</head>
+
+<body>
+    <table align="center" border="2" cellspacing="0" cellpadding="10">
+        <tr>
+            <td>Book Name</td>
+            <td>Author Name</td>
+            <td>Book Price</td>
+            <td>Book</td>
+        </tr>
+        {% for i in book %}
+        <tr>
+            <td>{{i.bookn}}</td>
+            <td>{{i.authorn}}</td>
+            <td>{{i.bookp}}</td>
+            <td><a href="{{MEDIA_URL}}{{i.book_file.url}}">{{i.bookn}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
